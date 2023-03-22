@@ -118,7 +118,7 @@ app.get("/urls/new", (req, res) => {
   if (!users[req.session.user_id]) {
     res.redirect('/login');
   } else {
-    const templateVars = { user: users[req.session.user_id] }
+    const templateVars = { user: users[req.session.user_id], urls: urlsForUser(urlDatabase, req.session.user_id)}
     res.render("urls_new", templateVars);
   }
 });
