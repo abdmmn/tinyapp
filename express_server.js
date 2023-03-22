@@ -6,7 +6,7 @@ const bodyParser = require("body-parser");//bodyParser is deprecated and express
 const cookieParser = require('cookie-parser');
 const cookieSession = require('cookie-session')
 const bcrypt = require('bcryptjs');
-const PORT = 8081; //default port
+const PORT = 8080; //default port
 
 
 app.use(express.urlencoded({ extended: true }));
